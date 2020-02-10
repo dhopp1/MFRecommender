@@ -10,4 +10,4 @@ data = XLSX.readxlsx("data.xlsx") |>
 
 model = MFRecommender.initialize(data.user_ids, data.media_ids)
 
-MFRecommender.inference(model..., "62b4868daf78b84aec53550732d643bf", 15)
+MFRecommender.inference(model..., "17491", 10)
