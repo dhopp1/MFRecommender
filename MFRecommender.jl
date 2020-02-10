@@ -50,7 +50,7 @@ module MFRecommender
         return recs
     end
 
-    function initialize(user_ids::Array, media_ids::Array, ratings::Array=nothing; reg::Float64=1e-3, learning_rate::Float64=1e-3, eps::Float64=1e-3, max_iter::Int=100)
+    function initialize(user_ids::Array, media_ids::Array, ratings::Array; reg::Float64=1e-3, learning_rate::Float64=1e-3, eps::Float64=1e-3, max_iter::Int=100)
         _recommender = GenRecommender(user_ids, media_ids, ratings)
         trained_recommender = train_recommender(_recommender, reg=reg, learning_rate=learning_rate, eps=eps, max_iter=max_iter)
         return (_recommender, trained_recommender)
