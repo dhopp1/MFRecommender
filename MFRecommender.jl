@@ -20,7 +20,7 @@ module MFRecommender
     function gen_events(r::GenRecommender)
 	    events = [Event(r.user_dict[user], r.media_dict[media], rating) for (user, media, rating) in zip(r.raw_user_ids, r.raw_media_ids, r.ratings)]
 	    return events
-	end
+    end
 
     gen_data_accessor(e::Array, r::GenRecommender) = DataAccessor(e, length(r.user_dict), length(r.media_dict))
 
