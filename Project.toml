@@ -1,5 +1,5 @@
 name = "MFRecommender"
-authoer = ["Daniel Hopp <daniel.hopp1@gmail.com>"]
+author = ["Daniel Hopp <daniel.hopp1@gmail.com>"]
 version = "0.0.0"
 
 [deps]
