@@ -1,0 +1,10 @@
+name = "MFRecommender"
+authoer = ["Daniel Hopp <daniel.hopp1@gmail.com>"]
+version = "0.0.0"
+
+[deps]
+Recommendation = "d27d45ae-66f1-5d53-80d2-11744f5c9556"
+
+[compat]
+julia = "≥ 1.0.0"
+Recommendation = "≥ 0.3.0"
