@@ -18,12 +18,9 @@ module MFRecommender
     GenRecommender(x, y) = GenRecommender(x, y, fill(10.0, (length(x), 1))) # default value of 10.0 for ratings
 
     function gen_events(r::GenRecommender)
-        events = Event[]
-        for (user, media, rating) in zip(r.raw_user_ids, r.raw_media_ids, r.ratings)
-            push!(events, Event(r.user_dict[user], r.media_dict[media], rating))
-        end
-        return events
-    end
+	    events = [Event(r.user_dict[user], r.media_dict[media], rating) for (user, media, rating) in zip(r.raw_user_ids, r.raw_media_ids, r.ratings)]
+	    return events
+	end
 
     gen_data_accessor(e::Array, r::GenRecommender) = DataAccessor(e, length(r.user_dict), length(r.media_dict))
 
