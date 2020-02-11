@@ -1,4 +1,5 @@
 name = "MFRecommender"
+uuid = "84cd3aa8-4cce-11ea-0c10-a55ae375ad38"
 author = ["Daniel Hopp <daniel.hopp1@gmail.com>"]
 version = "0.0.0"
 
