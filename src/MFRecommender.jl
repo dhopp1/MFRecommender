@@ -1,6 +1,8 @@
 module MFRecommender
 using Recommendation
 
+export initialize, inference
+
 mutable struct GenRecommender
     raw_user_ids::Array
     raw_media_ids::Array
